@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/bootstrap.css" charset="utf-8" type="text/css">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        <script src="js/jquery-1.11.2.js"></script>
+        <script src="js/scripts.js"></script>
+        <title>Title Case</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Title Case</h1>
+            <form id="title-case">
+                <div class="form-group">
+                    <label for="input_string">Enter a string of words</label>
+                    <input id="input_string" type="text">
+                </div>
+                <button type="submit" class="btn">Make Title Case!</button>
+            </form>
+            <div id="result">
+                <p>In title case:
+                    <span class="final_string"></span>
+                </p>
+            </div>
+        </div>
+
+
+  <h1>WhatsApp</h1><br><br>
+
+  <!-- Sem redirecionamento -->
+  <!-- <form action="#" method="get" onsubmit="abrirWhatsapp()">
+    <input type="text" name="nome" id="nome" placeholder="Nome" required><br>
+    <input type="tel" name="telefone" id="telefone" placeholder="Telefone" required><br>
+    <input type="email" name="email" id="email" placeholder="E-mail" required><br>
+
+    <button type="submit"><img src="assets/whatsapp.svg" alt="Icone Whatsapp"><span>Enviar dados p/ Whatsapp</span>
+    </button>
+  </form> -->
+
+  <!-- Com redirecionamento p/ página: obrigado.html -->
+  <form action="obrigado.html" method="get" onsubmit="abrirWhatsapp()">
+    <input type="text" size="40" name="nome" id="nome" placeholder="INGRESE NOMNRES" required><br>
+    <input type="tel" name="telefone" id="telefone" placeholder="INGRESE CELULAR" required><br>
+
+
+    <button type="submit"><img src="assets/whatsapp.svg" alt="Icone Whatsapp"><span>Enviar WhatsApp</span>
+  </form>
+
+  <script>
+    function abrirWhatsapp() {
+
+
+
+
+      var nome = document.getElementById("nome").value;
+      var telefone = document.getElementById("telefone").value;
+     
+
+      const str = telefone
+      const newStr = str.slice(1)
+      console.log(newStr) // 'midudev'
+      var url = "https://wa.me/593"+ newStr +"?text=" // Seu numero
+        + "Estimado(a) "+ nome +" le saludamos en representación de Banco Solidario / Tarjeta Alia";
+      window.open(url, '_blank').focus();
+
+    }
+  </script>
+    </body>
+</html>
